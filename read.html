@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Read Seshasya Pustakam · The Book of Sesha</title>
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/reader.css">
+</head>
+<body>
+<header class="bar">
+  <a class="icon-btn" href="index.html" aria-label="Back to the home page" title="Back">
+    <svg viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></svg>
+  </a>
+  <button class="icon-btn" id="toc-btn" aria-label="Contents" aria-expanded="false" aria-controls="toc" title="Contents">
+    <svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h10"/></svg>
+  </button>
+  <div class="title"><b>Seshasya Pustakam</b><span>The Book of Sesha</span></div>
+  <div class="pager">
+    <button class="icon-btn" id="prev" aria-label="Previous page"><svg viewBox="0 0 24 24"><path d="M18 15l-6-6-6 6"/></svg></button>
+    <label class="sr" for="page-num">Page number</label>
+    <input id="page-num" type="number" inputmode="numeric" min="1" value="1">
+    <span class="of">/ <span id="page-count">–</span></span>
+    <button class="icon-btn" id="next" aria-label="Next page"><svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></button>
+  </div>
+  <div class="zoom">
+    <button class="icon-btn" id="zoom-out" aria-label="Zoom out"><svg viewBox="0 0 24 24"><path d="M5 12h14"/></svg></button>
+    <button class="zoom-val" id="zoom-fit" title="Fit to width">Fit</button>
+    <button class="icon-btn" id="zoom-in" aria-label="Zoom in"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></button>
+  </div>
+</header>
+
+<aside class="toc" id="toc" aria-label="Contents" hidden>
+  <div class="toc-head"><b>Contents</b><button class="icon-btn" id="toc-close" aria-label="Close contents"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div>
+  <nav id="toc-list"><p class="muted">Loading…</p></nav>
+</aside>
+<div class="scrim" id="scrim" hidden></div>
+
+<main id="viewer" tabindex="-1">
+  <div class="loading" id="loading">
+    <img src="assets/img/emblem.svg" alt="" width="84" height="84">
+    <p>Opening the book…</p>
+    <div class="bar-track"><div class="bar-fill" id="progress"></div></div>
+  </div>
+  <div id="pages"></div>
+</main>
+
+<noscript><p class="noscript">The reader needs JavaScript. You can still <a href="assets/book/Seshasya_Pustakam.pdf">open the PDF directly</a>.</p></noscript>
+<script type="module" src="js/reader.js"></script>
+</body>
+</html>
