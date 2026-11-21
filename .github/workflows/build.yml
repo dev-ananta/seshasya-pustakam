@@ -3,7 +3,7 @@ name: Build Seshasya APK
 on:
   workflow_dispatch:
   push:
-    branches: [ main ]
+    branches: [ android-app ]
 
 permissions:
   contents: write
