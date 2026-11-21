@@ -8,6 +8,9 @@ pluginManagement {
             }
         }
         mavenCentral()
+        // Backup copies of Maven Central, used only if the main server fails.
+        maven("https://maven-central.storage-download.googleapis.com/maven2/")
+        maven("https://repo1.maven.org/maven2/")
         gradlePluginPortal()
     }
 }
@@ -16,6 +19,9 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
+        // Backup copies of Maven Central, used only if the main server fails.
+        maven("https://maven-central.storage-download.googleapis.com/maven2/")
+        maven("https://repo1.maven.org/maven2/")
     }
 }
 rootProject.name = "Seshasya"
