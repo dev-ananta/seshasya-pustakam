@@ -1,0 +1,30 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Serpent coils (Ananta Sesha) -->
+    <path
+        android:pathData="M33,72 C33,66 75,66 75,72 C75,77 33,77 33,72 Z"
+        android:strokeColor="#D9BF7C"
+        android:strokeWidth="2"
+        android:fillColor="#00000000" />
+    <path
+        android:pathData="M38,66 C38,61.5 70,61.5 70,66"
+        android:strokeColor="#D9BF7C"
+        android:strokeWidth="1.6"
+        android:fillColor="#00000000" />
+    <!-- Drifting leaf -->
+    <group
+        android:pivotX="54"
+        android:pivotY="46"
+        android:rotation="30">
+        <path
+            android:pathData="M54,28 C64,36 64,56 54,64 C44,56 44,36 54,28 Z"
+            android:fillColor="#9CC283" />
+        <path
+            android:pathData="M54,30 L54,68"
+            android:strokeColor="#13211B"
+            android:strokeWidth="1.2" />
+    </group>
+</vector>
